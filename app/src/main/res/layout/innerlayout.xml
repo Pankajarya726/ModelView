@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class = "ProductBinding">
+        
+        
+        
+        <variable
+            name="productmodel"
+            type="com.example.pankaj.modelview.viewmodel.ProductsViewModel"></variable>
+    </data>
+
+<android.support.v7.widget.CardView
+     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:imageUrl="@{productmodel.product_img}"
+            />
+
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv1"
+                android:text="@{productmodel.title}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"/>
+            <TextView
+
+                android:id="@+id/tv2"
+
+                android:textSize="16dp"
+                android:text="@{productmodel.qty}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>
+
+
+</layout>
